@@ -75,6 +75,8 @@ Go for the terminal UI, whose comment read "reproduces htmpl/catsubcats.html".
 Two implementations of one drawing, kept in agreement by hand and tested by
 neither.
 
-This package is checked against both: byte-identical to the Go one across 4000
-randomly generated catalogues, and the glyph runs it predicts appear verbatim in
-the served HTML of the other.
+When this code was extracted, its output was compared with both originals: it
+matched the Go terminal one byte for byte, and the glyph runs it predicts
+appeared verbatim in the served HTML of the other. Those comparisons were made
+against the original implementations; this repo's own tests (`tallytree_test.go`)
+do not repeat them.
