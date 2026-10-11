@@ -6,7 +6,7 @@ import (
 	"unicode/utf8"
 )
 
-// shop is the catalogue shape this was extracted from: an "everything" entry
+// shop is the catalog shape this was extracted from: an "everything" entry
 // beside the categories, one of which is open.
 func shop() []Node {
 	return []Node{
