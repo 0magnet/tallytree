@@ -80,3 +80,35 @@ matched the Go terminal one byte for byte, and the glyph runs it predicts
 appeared verbatim in the served HTML of the other. Those comparisons were made
 against the original implementations; this repo's own tests (`tallytree_test.go`)
 do not repeat them.
+
+## Dependency Graph
+
+Made with [goda](https://github.com/loov/goda):
+
+```
+go run github.com/loov/goda@latest graph github.com/0magnet/tallytree/... | dot -Tsvg -o docs/tallytree-goda-graph.svg
+```
+
+![Dependency Graph](docs/tallytree-goda-graph.svg "github.com/0magnet/tallytree Dependency Graph")
+
+## Lines of Code
+
+Made with [gocloc](https://github.com/hhatto/gocloc) (excludes `vendor/`, `node_modules/`, `.git/`):
+
+```
+gocloc --not-match-d='(vendor|node_modules|\.git)' .
+```
+
+```
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+Go                               2             23             86            258
+Makefile                         1             22             52            111
+YAML                             1              0              7             98
+Markdown                         1             23              0             90
+Bourne Shell                     1              8             17             31
+-------------------------------------------------------------------------------
+TOTAL                            6             76            162            588
+-------------------------------------------------------------------------------
+```
